@@ -16,6 +16,7 @@ UCYAN='\e[4;36m'        # Cyan
 
 all:
 	@printf "Launch configuration ${name}...\n"
+	@mkdir project
 	@vagrant up --provider=virtualbox
 
 help:

@@ -10,7 +10,7 @@ Download box bento/ubuntu-22.04 for virtualbox from [vagrantup](https://app.vagr
 
 ### Step 2
 
-Clonr this repository: 
+Clonr this repository:
 
 ``git clone https://github.com/codesshaman/vagrant_ubuntu_desktop.git``
 
@@ -38,6 +38,12 @@ or with make:
 
 ### Step 5
 
+Create project folder:
+
+``mkdir project``
+
+### Step 6
+
 Install configuration:
 
 ``vagrant up --provider=virtualbox``
@@ -46,11 +52,11 @@ or with make:
 
 ``make``
 
-### Step 6
+### Step 7
 
 Login with login and password "vagrant".
 
-### Step 7
+### Step 8
 
 Connect to VM from terminal:
 
