@@ -27,17 +27,17 @@ Vagrant.configure(2) do |config|
         ubuntu.vm.synced_folder "project",
         "/home/vagrant/project"
         ubuntu.vm.hostname = "ubuntu-22.04"
-        debian.vm.provision "shell",
+        ubuntu.vm.provision "shell",
         privileged: true, path: "setup.sh"
-        debian.vm.network "forwarded_port",
+        ubuntu.vm.network "forwarded_port",
         guest: OPEN_PORT1, host: OPEN_PORT1
-        debian.vm.network "forwarded_port",
+        ubuntu.vm.network "forwarded_port",
         guest: OPEN_PORT2, host: OPEN_PORT2
-        debian.vm.network "forwarded_port",
+        ubuntu.vm.network "forwarded_port",
         guest: OPEN_PORT3, host: OPEN_PORT3
-        debian.vm.network "forwarded_port",
+        ubuntu.vm.network "forwarded_port",
         guest: OPEN_PORT4, host: OPEN_PORT4
-        debian.vm.network "forwarded_port",
+        ubuntu.vm.network "forwarded_port",
         guest: OPEN_PORT5, host: OPEN_PORT5
         ubuntu.vm.provider "virtualbox" do |v|
             v.customize ["modifyvm", :id, "--vram", "32"]
